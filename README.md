@@ -1,54 +1,49 @@
-# React + TypeScript + Vite
+# Instalación de Dependencias
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este documento explica cómo instalar y gestionar las dependencias de Node.js para este proyecto.
 
-Currently, two official plugins are available:
+## Prerrequisitos
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Antes de comenzar, asegúrate de tener instalado:
 
-## Expanding the ESLint configuration
+- **Node.js** (versión 16.0 o superior)
+- **npm** (incluido con Node.js) o **yarn** como gestor de paquetes alternativo
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Puedes verificar las versiones instaladas ejecutando:
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+```bash
+node --version
+npm --version
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Instalación
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### Instalación básica
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+Para instalar todas las dependencias del proyecto, ejecuta uno de los siguientes comandos en la raíz del proyecto:
+
+```bash
+# Con npm
+npm install
+
 ```
+
+## Archivo .env
+
+Crea un archivo `.env` con las variables y sus valores en la raiz del proyecto:
+
+```env
+VITE_API_URL=API_URL
+```
+
+## Corres la aplicacion
+
+```bash
+# Iniciar la aplicación en modo desarrollo
+npm run dev
+```
+
+
+
+
+
