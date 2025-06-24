@@ -13,7 +13,7 @@ import { getCategories } from '@/services/category.services';
 
 export default function TabProductsGeneral() {
 
-  const { data } = useQuery({ queryKey: ['products'], queryFn: getProducts })
+  const { data } = useQuery({ queryKey: ['products'], queryFn: () => getProducts()})
   const { id } = useIdParams("editid")
 
 

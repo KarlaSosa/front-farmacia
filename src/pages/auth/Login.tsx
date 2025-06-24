@@ -35,8 +35,7 @@ export default function Login() {
       navigate('/admin',{replace: true})
 
     } catch (error) {
-        toast.error('Correo electronico o contraseña incorrectos')
-  
+          toast.error('Correo electronico o contraseña incorrectos')
     }
 
   }
