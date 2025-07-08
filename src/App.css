@@ -852,6 +852,12 @@ button{
     gap: 1.5rem;
     grid-template-columns: 1fr 280px;
 }
+@media screen and (width < 768px){
+    .main-branch__grid,.branch__grid{
+        grid-template-columns: 1fr;
+    }
+    
+}
 .contacts{
     max-height: 400px;
     overflow-y: auto;    
